@@ -12,15 +12,15 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, UltimateFantasy.MODID);
 
     public static final RegistryObject<Item> WEAK_POTION = ITEMS.register("weak_potion",
-            () -> new Item(new Item.Properties().stacksTo(99).tab(CreativeModeTab.TAB_BREWING)));
+            () -> new Item(new Item.Properties().stacksTo(99).tab(ModCreativeModTabs.ULTIMATE_FANTASY_ITEMS)));
     public static final RegistryObject<Item> ANTIDOTE = ITEMS.register("antidote",
-            () -> new Item(new Item.Properties().stacksTo(99).tab(CreativeModeTab.TAB_BREWING)));
+            () -> new Item(new Item.Properties().stacksTo(99).tab(ModCreativeModTabs.ULTIMATE_FANTASY_ITEMS)));
     public static final RegistryObject<Item> PHOENIX_DOWN = ITEMS.register("phoenix_down",
-            () -> new Item(new Item.Properties().stacksTo(99).tab(CreativeModeTab.TAB_BREWING)));
+            () -> new Item(new Item.Properties().stacksTo(99).tab(ModCreativeModTabs.ULTIMATE_FANTASY_ITEMS)));
     public static final RegistryObject<Item> SLEEPING_BAG = ITEMS.register("sleeping_bag",
-            () -> new Item(new Item.Properties().stacksTo(99).tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().stacksTo(99).tab(ModCreativeModTabs.ULTIMATE_FANTASY_ITEMS)));
     public static final RegistryObject<Item> POTION = ITEMS.register("potion",
-            () -> new Item(new Item.Properties().stacksTo(99).tab(CreativeModeTab.TAB_BREWING)));
+            () -> new Item(new Item.Properties().stacksTo(99).tab(ModCreativeModTabs.ULTIMATE_FANTASY_ITEMS)));
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

@@ -1,5 +1,6 @@
 package com.mkultra.ultimatefantasy;
 
+import com.mkultra.ultimatefantasy.alchemy.ModPotions;
 import com.mkultra.ultimatefantasy.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;

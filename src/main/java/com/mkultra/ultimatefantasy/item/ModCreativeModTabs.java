@@ -7,7 +7,7 @@ public class ModCreativeModTabs {
     public static final CreativeModeTab ULTIMATE_FANTASY_ITEMS = new CreativeModeTab("ultimate_fantasy_items") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.POTION.get());
+            return new ItemStack(ModItems.SLEEPING_BAG.get());
         }
     };
 }

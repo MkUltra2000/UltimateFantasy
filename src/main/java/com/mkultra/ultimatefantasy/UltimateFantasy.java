@@ -28,7 +28,7 @@ public class UltimateFantasy
 
         // Register Items
         ModItems.register(modEventBus);
-
+        ModPotions.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }

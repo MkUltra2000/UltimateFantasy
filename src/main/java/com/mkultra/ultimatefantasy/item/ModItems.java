@@ -14,7 +14,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, UltimateFantasy.MODID);
 
     //Custom PotionItems
-    public static final RegistryObject<Item> WEAK_POTION = ITEMS.register("weak_potion",
+    public static final RegistryObject<Item> CUSTOMPOTION = ITEMS.register("custom_potion",
            () -> new UltimateFantasyPotionItem(new Item.Properties().stacksTo(99).tab(ModCreativeModTabs.ULTIMATE_FANTASY_ITEMS)));
 
     //public static final RegistryObject<Item> ANTIDOTE = ITEMS.register("antidote",

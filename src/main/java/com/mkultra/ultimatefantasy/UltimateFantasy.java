@@ -1,6 +1,7 @@
 package com.mkultra.ultimatefantasy;
 
 import com.mkultra.ultimatefantasy.alchemy.ModPotions;
+import com.mkultra.ultimatefantasy.effects.ModMobEffects;
 import com.mkultra.ultimatefantasy.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
@@ -26,9 +27,12 @@ public class UltimateFantasy
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        // Register Items
+        // Register Forge Registry's
         ModItems.register(modEventBus);
+        ModMobEffects.register(modEventBus);
         ModPotions.register(modEventBus);
+
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }

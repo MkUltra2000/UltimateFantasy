@@ -1,6 +1,11 @@
 package net.MkUltra.ultimatefantasy;
 
 import com.mojang.logging.LogUtils;
+import net.MkUltra.ultimatefantasy.block.ModBlocks;
+import net.MkUltra.ultimatefantasy.item.ModItems;
+import net.MkUltra.ultimatefantasy.tabs.ModTabs;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -25,8 +30,10 @@ public class ultimatefantasy
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        modEventBus.addListener(this::commonSetup);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
+        modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
@@ -38,6 +45,12 @@ public class ultimatefantasy
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
+        if (event.getTab() == ModTabs.UFMODITEMS_TAB){
+            event.accept(ModItems.POTION);
+        }
+        if (event.getTab() == ModTabs.UFMODBLOCKS_TAB){
+            event.accept(ModBlocks.ESTERSAND_BLOCK);
+        }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

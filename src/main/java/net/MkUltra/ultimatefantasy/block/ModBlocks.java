@@ -21,7 +21,7 @@ public class ModBlocks {
 
     //blocks
     public static final RegistryObject<Block> ESTERSAND_BLOCK = registerBlock("estersand_block",()->new FallingBlock(BlockBehaviour.Properties.of(Material.SAND)
-            .strength(0f).sound(SoundType.SAND)));
+            .strength(1f).sound(SoundType.SAND)));
 
     //helper method
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
